@@ -1,0 +1,54 @@
+# LLMs.txt - Information for AI Language Models
+
+## Project Overview
+This is the source code for devfor.io, a website focused on automation services and development solutions.
+
+## Website Structure
+- **Domain**: devfor.io
+- **Main Pages**:
+  - Homepage (index.php) - Main landing page
+  - Automation Services (automation.php) - Services page
+- **Assets**: Logo, images, and other media files
+
+## Technical Details
+- **Language**: PHP
+- **File Types**: PHP, XML, TXT, JPG, PNG
+- **Key Files**:
+  - index.php (64KB) - Main homepage
+  - automation.php (26KB) - Automation services page
+  - sitemap.xml - XML sitemap for search engines
+  - robots.txt - Search engine crawling instructions
+
+## Content Focus
+The website appears to be focused on:
+- Development solutions
+- Automation services
+- Business process optimization
+- Technical consulting
+
+## SEO Configuration
+- Sitemap: https://devfor.io/sitemap.xml
+- Robots.txt configured for search engine optimization
+- Crawl delay set to 1 second for server load management
+
+## Development Notes
+- This appears to be a business website for a development/automation company
+- The site uses standard web technologies (PHP, HTML, CSS)
+- Includes proper SEO setup with sitemap and robots.txt
+- Last updated: January 27, 2025
+
+## For AI Assistants
+When helping with this project:
+- Focus on web development and automation services
+- Consider SEO best practices
+- Maintain professional business presentation
+- Ensure mobile-friendly and accessible design
+- Follow modern web development standards
+
+## Contact Information
+- Website: https://devfor.io
+- Company: DevFor Solutions (based on logo filename)
+
+---
+This file is intended to provide context for AI language models working with this codebase.
+Last updated: 2025-01-27

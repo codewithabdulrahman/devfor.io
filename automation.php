@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFor - AI-Powered Automation That Outperforms Traditional Agencies</title>
+    <meta name="description" content="DevFor - Leading AI automation services in USA. Custom AI agents, workflow automation, and intelligent process optimization. Get started from $800/month vs industry average of $5,000+.">
+    <meta name="keywords" content="AI automation, AI agents, workflow automation, process automation, AI integration, automation consulting, AI development, business automation, automation agency USA">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics 4 (GA4) - Replace with your actual ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+        
+        // Track CTA button clicks
+        function trackCTA(buttonText, location) {
+            gtag('event', 'click', {
+                event_category: 'CTA',
+                event_label: buttonText,
+                value: location
+            });
+        }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            color: #ff6b35;
+        }
+        
+        .header-cta {
+            background: #1a1a1a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .header-cta:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: #ffffff;
+            position: relative;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #1a1a1a;
+        }
+        
+        .hero-text .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        
+        .hero-cta {
+            background: #1a1a1a;
+            color: white;
+            padding: 18px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .hero-cta:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+        }
+        
+        .hero-visual {
+            text-align: center;
+        }
+        
+        .hero-image {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .hero-stats {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-stats h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .hero-stats p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .hero-feature {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        /* Value Proposition Strip */
+        .value-strip {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .value-strip-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-size: 1.2rem;
+        }
+        
+        /* Solutions Section */
+        .solutions {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #ff6b35;
+        }
+        
+        .solution-icons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .solution-icon {
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+        }
+        
+        .solution-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .solution-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        /* Success Story */
+        .success-story {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .success-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .success-text h3 {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .success-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+        
+        .success-highlight {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .highlight-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .highlight-text h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        
+        .highlight-text p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .success-image {
+            text-align: center;
+        }
+        
+        .success-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e5e5e5;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-photo {
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #666;
+        }
+        
+        .testimonial-quote {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .nav-arrow {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .nav-arrow:hover {
+            background: #ff6b35;
+            color: white;
+            border-color: #ff6b35;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-cta .cta-button {
+            background: #ff6b35;
+            color: white;
+            padding: 18px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            color: #ff6b35;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .footer-section p {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #ccc;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .success-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .solution-card,
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.php" class="logo">devfor.</a>
+                <a href="https://cal.com/codewithabdulrahman/15min" target="_blank" class="header-cta">Book a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your Competitor Isn't Smarter—Their AI Agent Is.</h1>
+                    <p class="subtitle">We specialize in practical AI agents that deliver real-world results, measurable and undeniable.</p>
+                    <a href="https://cal.com/codewithabdulrahman/15min" target="_blank" class="hero-cta" onclick="trackCTA('Book a Call', 'Hero')">Book a Call</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">🤖</div>
+                    <div class="hero-stats">
+                        <h3>95% Projects delivered on time and on budget</h3>
+                        <p>Trusted by 200+ growing businesses</p>
+                    </div>
+                    <div class="hero-feature">
+                        <span>🔗</span>
+                        <span>Discover our custom-built AI agents in action</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Strip -->
+    <section class="value-strip">
+        <div class="container">
+            <div class="value-strip-content">
+                <div class="value-item">
+                    <div class="value-icon">→</div>
+                    <span>Just Absolute Results.</span>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✓</div>
+                    <span>No Ifs. No Buts.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions">
+        <div class="container">
+            <h2 class="section-title">What solution do you need</h2>
+            <p class="section-subtitle">Shaping Your Digital Journey for Success</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icons">
+                        <div class="solution-icon">🤖</div>
+                        <div class="solution-icon">🧠</div>
+                        <div class="solution-icon">⚡</div>
+                        <div class="solution-icon">🔗</div>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <p>Falling behind in the AI race? We help you move from confusion to execution. Discover what GenAI can do for your business.</p>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icons">
+                        <div class="solution-icon">🌐</div>
+                        <div class="solution-icon">📱</div>
+                        <div class="solution-icon">⚙️</div>
+                        <div class="solution-icon">🚀</div>
+                    </div>
+                    <h3>Web/Mobile Development</h3>
+                    <p>Need a site that's fast, secure, and built to convert? We handle design, code, and performance end-to-end. Let's bring your website to life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Story -->
+    <section class="success-story">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-text">
+                    <h3>Our Success Story</h3>
+                    <h2>Streamlined DevFor's operations with scalable, intelligent solutions.</h2>
+                    
+                    <div class="success-highlight">
+                        <div class="highlight-icon">📈</div>
+                        <div class="highlight-text">
+                            <h4>30x increase in orders per annum</h4>
+                            <p>Streamlined logistics operations with AI-powered routing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-image">
+                    <div style="width: 400px; height: 300px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                        🚀
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success, Powered by DevFor</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">👨</div>
+                    <p class="testimonial-quote">"DevFor have been absolutely incredible to work with. They are highly professional, extremely prompt, and bring a diverse range of skill sets to the table."</p>
+                    <div class="testimonial-author">Scott, Founder</div>
+                    <div class="testimonial-company">Aurora</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">👩</div>
+                    <p class="testimonial-quote">"I am grateful to be connected with DevFor! They are technically proficient, proactive in communication, and true partners in achieving our goals."</p>
+                    <div class="testimonial-author">Kara, Co-founder</div>
+                    <div class="testimonial-company">Narratize</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-photo">👨</div>
+                    <p class="testimonial-quote">"DevFor did a fantastic job. They were very patient and helpful in better understanding the scoping of the project. We will be working with them in the future!"</p>
+                    <div class="testimonial-author">Stefan Savevski, Co-Founder</div>
+                    <div class="testimonial-company">Armor Wallet</div>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <div class="nav-arrow">←</div>
+                <div class="nav-arrow">→</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to build your AI agent?</h2>
+            <p>Let's discuss how we can help you automate and scale your business operations with intelligent AI solutions.</p>
+            <a href="https://cal.com/codewithabdulrahman/15min" target="_blank" class="cta-button" onclick="trackCTA('Book AI Consultation', 'Final CTA')">Book a Call</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevFor</h4>
+                    <p>Leading AI automation and development services in USA. We help businesses scale with intelligent solutions.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p>Generative AI • Web Development • Mobile Apps • AI Automation • Process Optimization • Custom Solutions</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <p>E-commerce • Healthcare • Finance • Education • Manufacturing • Logistics • Real Estate • Technology</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Book a free consultation to discuss your project requirements and get a custom quote.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevFor. All rights reserved. | AI Services Starting at $800/month | Available Nationwide in USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'all 0.6s ease-out';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
