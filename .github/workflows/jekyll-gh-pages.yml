@@ -1,5 +1,5 @@
-# Workflow for deploying a PHP website to GitHub Pages
-name: Deploy PHP Website to GitHub Pages
+# Workflow for deploying a static HTML website to GitHub Pages
+name: Deploy HTML Website to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,16 +31,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-      
       - name: Create deployment directory
         run: |
           mkdir -p _site
-          cp -r *.php *.xml *.txt *.jpg *.png _site/
-          echo "PHP website files copied to _site directory"
+          cp -r *.html *.xml *.txt *.jpg *.png _site/
+          echo "HTML website files copied to _site directory"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -7,8 +7,8 @@ Disallow: /private/
 Disallow: /temp/
 
 # Allow important pages
-Allow: /index.php
-Allow: /automation.php
+Allow: /index.html
+Allow: /automation.html
 
 # Sitemap location
 Sitemap: https://devfor.io/sitemap.xml
