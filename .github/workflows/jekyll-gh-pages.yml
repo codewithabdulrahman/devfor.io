@@ -1,5 +1,5 @@
-# Workflow for deploying a static HTML website to GitHub Pages
-name: Deploy HTML Website to GitHub Pages
+# Workflow for deploying a Jekyll website to GitHub Pages
+name: Deploy Jekyll Website to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,11 +31,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
-      - name: Create deployment directory
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+      
+      - name: Setup Jekyll
         run: |
-          mkdir -p _site
-          cp -r *.html *.xml *.txt *.jpg *.png _site/
-          echo "HTML website files copied to _site directory"
+          gem install jekyll bundler
+          bundle install
+      
+      - name: Build with Jekyll
+        run: |
+          jekyll build --destination _site
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

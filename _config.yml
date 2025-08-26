@@ -1,0 +1,13 @@
+# Jekyll configuration for clean URLs
+permalink: /:title/
+relative_links:
+  enabled: true
+  collections: true
+
+# GitHub Pages settings
+plugins:
+  - jekyll-relative-links
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
