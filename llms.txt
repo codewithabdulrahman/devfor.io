@@ -18,6 +18,8 @@ This is the source code for devfor.io, a website focused on automation services 
   - automation.php (26KB) - Automation services page
   - sitemap.xml - XML sitemap for search engines
   - robots.txt - Search engine crawling instructions
+- **Deployment**: GitHub Pages with PHP support
+- **CI/CD**: GitHub Actions workflow for automated deployment
 
 ## Content Focus
 The website appears to be focused on:
